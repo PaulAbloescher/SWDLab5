@@ -1,0 +1,24 @@
+# Create a container registry
+az acr create --resource-group <Resource Group> --name <Name of the container registry> --sku Basic
+
+# In Azure DevOps
+# Step 1
+# Enable "Multi-stage pipelines"
+In the upper right corner click on the avatar symbol.
+Click the "..." symbol in the opened menu.
+Then "User settings" and "Preview features".
+Make sure "Multi-stage pipelines" is enabled.
+
+# Step 2
+# Create the pipeline
+Goto "Pipelines" and select "New Pipeline".
+When beeing asked where your code is choose GitHub.
+Select the associated repository --> "Approve and install".
+
+In the configuration tab choose "Deploy to Azure Kubernetes Service".
+Select the created cluster (Name of the cluster).
+Select "Existing" for the "Namespace" --> "default".
+Select the name of the former created container registry (Name of the container registry).
+Imagename and the service port can be left as the default values.
+Then click "Validate and configure".
+Then click "Save and run".
