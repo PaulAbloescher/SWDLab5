@@ -1,5 +1,0 @@
-Github:
-https://github.com/PaulAbloescher/SWDLab5
-
-Deployment:
-http://52.156.206.241:8080/
